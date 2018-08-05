@@ -1,6 +1,6 @@
-# React Todo List Lab
+# HELLO people
 
-### Getting Started
+### Please enjoy my dumb page!!!!
 
 - Fork and clone repo
 - `cd react-todo-list`
