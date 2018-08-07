@@ -7,7 +7,7 @@ import { Header } from "./header";
 import { Sidebar } from "./sidebar"
 import { Abt } from "./abt";
 import { Todo } from "./todo";
-import { Skate } from "./skate"
+
 
 
 class App2 extends React.Component {
@@ -23,7 +23,7 @@ class App2 extends React.Component {
                 <Route path="/" exact component={Abt} />
                 <Route path="/abt" component={Abt} />
                 <Route path="/t" component={Todo} />
-                <Route path="/s" component={Skate} />
+
             </Switch>
             </div>
             

@@ -4,8 +4,9 @@ import React from "react"
 export class Todo extends React.Component {
     state = {
         todos: [
-            { description: 'Despacito', isDone: false },
-            { description: 'All Star', isDone: true },
+            { description: 'cry less', isDone: false },
+            { description: 'stan loona', isDone: true },
+            { description: 'Dont fail chemistry', isDone: true }
             
         ], 
         newToDoDescription: "",
@@ -64,19 +65,29 @@ export class Todo extends React.Component {
         });
     }
 
+    handleDelete = (currentToDo) => {
+        const index= this.state.todos.indexOf(currentToDo)
+        
+        this.setState ({
+            todos:this.state.todos.splice (index, 1)
+
+        })
+    }
+
 
     render() {
         return <div class="todo">
-            <h1>Alexa Play:</h1>
-            <label htmlFor="newToDoDescription" >Add text</label>
+            <h1>To-Do List</h1>
+            <div id="bar">
             <input 
                 type="text" 
                 value={this.state.newToDoDescription} 
                 name="newToDoDescription" 
                 id="newToDoDescription"
                 onChange={this.handleOnChange}
+                placeholder="Add to do..."
                 />
-            <button onClick={this.handleAddToDo}>Add</button>
+            <button onClick={this.handleAddToDo} class="add">Add</button></div>
             <ul>
                 {this.state.todos.map((a) => {
                     let completeClass = "";
@@ -84,7 +95,9 @@ export class Todo extends React.Component {
                         completeClass = "complete"
                     }
                     return <li className={completeClass}
-                        onClick={() => this.handleToDoClick(a)}>{a.description}</li>
+                        onClick={() => this.handleToDoClick(a)}>{a.description}
+                        <button onClick={() => this.handleDelete(a)} class="delete">x</button>
+                        </li>
 
 
                       /* if (a.isDone){
@@ -95,6 +108,7 @@ export class Todo extends React.Component {
 
                 })}
             </ul>
+            <p>Stick to it lol don't be a lazy ass</p>
         </div>
     }
 }

@@ -8,9 +8,10 @@ export class Aside extends React.Component {
             <a class="t"href="/">hello</a>
    
             <nav>
-                <a href="/abt">abt</a>
+                <a href="/">refresh</a>
+                <a href="/abt">about</a>
                 <a href="/t">to do</a>
-                <a href="/s">favourite</a>
+
             </nav>
 
             </aside>
