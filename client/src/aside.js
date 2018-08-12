@@ -10,7 +10,7 @@ export class Aside extends React.Component {
             <nav>
                 <a href="/">refresh</a>
                 <a href="/abt">about</a>
-                <a href="/t">to do</a>
+                <a href="/td">to do</a>
 
             </nav>
 
