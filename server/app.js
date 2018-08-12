@@ -5,7 +5,9 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var todosRouter = require('./routes/todos');
+
+const port = 8080
 
 var app = express();
 
@@ -20,7 +22,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/td', todosRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -38,4 +40,17 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+
+// console.log("Calling app.listen().");
+
+// var server = app.listen(8080, function (){
+//   console.log("Calling app.listen's callback function.");
+//   var host = server.address().address;
+//   var port = server.address().port;
+//   console.log('Example app listening at http://localhost', host, port);
+// });
+
+// console.log("app.listen() executed.");
+
+app.listen (port, () => console.log(`Listening on ${port}`));
 module.exports = app;

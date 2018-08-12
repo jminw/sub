@@ -5,7 +5,7 @@ export class Aside extends React.Component {
     render() {
         return ( 
             <aside>
-            <a class="t"href="/">hello</a>
+            <a id="t"href="/">l'idiot</a>
    
             <nav>
                 <a href="/">refresh</a>

@@ -3,14 +3,18 @@ import React from "react"
 
 export class Todo extends React.Component {
     state = {
-        todos: [
-            { description: 'cry less', isDone: false },
-            { description: 'stan loona', isDone: true },
-            { description: 'Dont fail chemistry', isDone: true }
-            
-        ], 
-        newToDoDescription: "",
+        todos: [], 
+         newToDoDescription: "",
     };
+
+    async componentDidMount() {
+        const response = await fetch("/td");
+        const { todos } = await response.json();
+    
+        this.setState({
+          todos,
+        });
+      }
 
 
     handleOnChange = event => {
@@ -60,6 +64,7 @@ export class Todo extends React.Component {
             ...this.state.todos,
             
         ];
+          
         this.setState ({
             todos: newToDos,
         });
@@ -76,7 +81,7 @@ export class Todo extends React.Component {
 
 
     render() {
-        return <div class="todo">
+        return <div className="todo">
             <h1>To-Do List</h1>
             <div id="bar">
             <input 
@@ -87,7 +92,7 @@ export class Todo extends React.Component {
                 onChange={this.handleOnChange}
                 placeholder="Add to do..."
                 />
-            <button onClick={this.handleAddToDo} class="add">Add</button></div>
+            <button onClick={this.handleAddToDo} className="add">Add</button></div>
             <ul>
                 {this.state.todos.map((a) => {
                     let completeClass = "";
@@ -96,7 +101,7 @@ export class Todo extends React.Component {
                     }
                     return <li className={completeClass}
                         onClick={() => this.handleToDoClick(a)}>{a.description}
-                        <button onClick={() => this.handleDelete(a)} class="delete">x</button>
+                        <button onClick={() => this.handleDelete(a)} className="delete">x</button>
                         </li>
 
 
@@ -108,7 +113,7 @@ export class Todo extends React.Component {
 
                 })}
             </ul>
-            <p>Stick to it lol don't be a lazy ass</p>
+
         </div>
     }
 }

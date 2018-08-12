@@ -17,12 +17,12 @@ class App2 extends React.Component {
             
             <Header />
             <Aside />
-            <div class="stuff">
+            <div className="stuff">
             <Sidebar />
             <Switch>
                 <Route path="/" exact component={Abt} />
                 <Route path="/abt" component={Abt} />
-                <Route path="/t" component={Todo} />
+                <Route path="/td" component={Todo} />
 
             </Switch>
             </div>

@@ -4,7 +4,6 @@ body {
     text-align:left;line-height:180%;
 }
 
- 
 a {
     color:#999;
     text-decoration:none;
@@ -26,7 +25,7 @@ img{
     border:none;
     text-decoration:none;
 }
-h1,h3,h4,h5,h6 {
+h1 {
     padding:0;margin:0;margin-bottom:10px;
     font-family:'Playfair Display',sans-serif;font-size:18px;color:#abc6ea;font-weight:400;
 }
@@ -105,7 +104,7 @@ section, section img {
     font-size:14px;line-height:150%;
 }
 
-h8 {
+h3 {
     font-family:'Playfair Display',sans-serif;color:#abc6ea;font-size:18px;display:block;margin-bottom:10px;
 }
 
@@ -118,13 +117,13 @@ aside {
     z-index:314341;
 }
 
-a.t {
+a#t {
     color:#444;font-size:15px;
 }
 
-a.t:hover { opacity:.7; }
+a#t:hover { opacity:.7; }
 
-a.t:before { width:15px;border-radius:3px;margin-bottom:-3px;margin-right:10px;background:#abc6ea;height:15px;content:'';display:inline-block;}
+a#t:before { width:15px;border-radius:3px;margin-bottom:-3px;margin-right:10px;background:#abc6ea;height:15px;content:'';display:inline-block;}
 
 header {
     height:calc(100vh);
