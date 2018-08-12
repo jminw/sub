@@ -1,0 +1,8 @@
+{
+    "name": "page",
+    "description": "Hey miss carter!",
+    "version": "1.0.0",
+    "engines": {
+      "node": "10.6.0"
+    }
+  }
