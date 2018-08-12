@@ -3,7 +3,7 @@ const router = express.Router();
 
 
 
-router.get('/td', (req, res) => {
+router.get('/', (req, res) => {
   const todos = [
       { description: 'todo 1', isDone: false },
       { description: 'todo 2', isDone: true },
