@@ -6,4 +6,4 @@ import App from "./App2";
 
 ReactDOM.render(<App />, document.getElementById("root"));
 
-registerServiceWorker();
+// registerServiceWorker();
